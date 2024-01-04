@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../public/css/dashboard.css">
+</head>
+<body>
+    <h1 class="title">Menssagens</h1>
+
+    <div class="container">
+        <% for(let i = 0; i < listemails.length; i++) { %>
+            <div class="card">
+                <div class="content-titles">
+                    <h1><%= listemails[i].nome %></h1>
+                    <p><%= listemails[i].createdAt %></p>
+                </div>
+                <p class="mensagem"><%= listemails[i].messagens %></p>
+                <div class="contacts">
+                    <span><%= listemails[i].email %></span>
+                    <span><%= listemails[i].numero %></span>
+                </div>
+            </div>
+          <% }%>
+    </div>
+
+</body>
+</html>
